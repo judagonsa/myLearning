@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		113465BCFA65C123E73F178C /* Pods_myLearningSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE86455DF2EC6CEC3AF5859 /* Pods_myLearningSwiftUI.framework */; };
 		7CAC6F43B4C0BC02DAC18616 /* Pods_myLearningSwiftUI_myLearningSwiftUIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8187EE9F371717A125B5497D /* Pods_myLearningSwiftUI_myLearningSwiftUIUITests.framework */; };
+		9127893126F3F7E600E6EA96 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9127893026F3F7E600E6EA96 /* Login.swift */; };
+		9127893426F4030800E6EA96 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9127893326F4030800E6EA96 /* Calculator.swift */; };
 		9144DC3226F3AA3F00398BA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9144DC3126F3AA3F00398BA2 /* AppDelegate.swift */; };
 		9144DC3426F3AA3F00398BA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9144DC3326F3AA3F00398BA2 /* SceneDelegate.swift */; };
 		9144DC3626F3AA3F00398BA2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9144DC3526F3AA3F00398BA2 /* ContentView.swift */; };
@@ -42,6 +44,8 @@
 		2B17C97EB42716A85E84F3FA /* Pods-myLearningSwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myLearningSwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-myLearningSwiftUITests/Pods-myLearningSwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8187EE9F371717A125B5497D /* Pods_myLearningSwiftUI_myLearningSwiftUIUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myLearningSwiftUI_myLearningSwiftUIUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83514C24554B10273A981EEF /* Pods-myLearningSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myLearningSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-myLearningSwiftUITests/Pods-myLearningSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9127893026F3F7E600E6EA96 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		9127893326F4030800E6EA96 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		9144DC2E26F3AA3F00398BA2 /* myLearningSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myLearningSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9144DC3126F3AA3F00398BA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9144DC3326F3AA3F00398BA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,13 +115,30 @@
 				2B17C97EB42716A85E84F3FA /* Pods-myLearningSwiftUITests.debug.xcconfig */,
 				83514C24554B10273A981EEF /* Pods-myLearningSwiftUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9127892D26F3F7C300E6EA96 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9127893026F3F7E600E6EA96 /* Login.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		9127893226F402FA00E6EA96 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				9127893326F4030800E6EA96 /* Calculator.swift */,
+			);
+			path = Calculator;
 			sourceTree = "<group>";
 		};
 		9144DC2526F3AA3F00398BA2 = {
 			isa = PBXGroup;
 			children = (
+				9127893226F402FA00E6EA96 /* Calculator */,
+				9127892D26F3F7C300E6EA96 /* Login */,
 				9144DC3026F3AA3F00398BA2 /* myLearningSwiftUI */,
 				9144DC4726F3AA4100398BA2 /* myLearningSwiftUITests */,
 				9144DC5226F3AA4100398BA2 /* myLearningSwiftUIUITests */,
@@ -382,6 +403,8 @@
 				9144DC3226F3AA3F00398BA2 /* AppDelegate.swift in Sources */,
 				9144DC3426F3AA3F00398BA2 /* SceneDelegate.swift in Sources */,
 				9144DC3626F3AA3F00398BA2 /* ContentView.swift in Sources */,
+				9127893426F4030800E6EA96 /* Calculator.swift in Sources */,
+				9127893126F3F7E600E6EA96 /* Login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
