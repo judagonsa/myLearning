@@ -19,6 +19,7 @@
 		9144DC3E26F3AA4100398BA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9144DC3C26F3AA4100398BA2 /* LaunchScreen.storyboard */; };
 		9144DC4926F3AA4100398BA2 /* myLearningSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9144DC4826F3AA4100398BA2 /* myLearningSwiftUITests.swift */; };
 		9144DC5426F3AA4100398BA2 /* myLearningSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9144DC5326F3AA4100398BA2 /* myLearningSwiftUIUITests.swift */; };
+		91BDC8BB277D2B3B00C10356 /* ReduxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BDC8BA277D2B3B00C10356 /* ReduxView.swift */; };
 		D38511C8F6B9A286942002BF /* Pods_myLearningSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF73FE4313F303614FEA8019 /* Pods_myLearningSwiftUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		9144DC4F26F3AA4100398BA2 /* myLearningSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myLearningSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9144DC5326F3AA4100398BA2 /* myLearningSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myLearningSwiftUIUITests.swift; sourceTree = "<group>"; };
 		9144DC5526F3AA4100398BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91BDC8BA277D2B3B00C10356 /* ReduxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxView.swift; sourceTree = "<group>"; };
 		AEBE8414383CFA43657EEDB6 /* Pods-myLearningSwiftUI-myLearningSwiftUIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myLearningSwiftUI-myLearningSwiftUIUITests.release.xcconfig"; path = "Target Support Files/Pods-myLearningSwiftUI-myLearningSwiftUIUITests/Pods-myLearningSwiftUI-myLearningSwiftUIUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CDE86455DF2EC6CEC3AF5859 /* Pods_myLearningSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myLearningSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF73FE4313F303614FEA8019 /* Pods_myLearningSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myLearningSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,8 +139,6 @@
 		9144DC2526F3AA3F00398BA2 = {
 			isa = PBXGroup;
 			children = (
-				9127893226F402FA00E6EA96 /* Calculator */,
-				9127892D26F3F7C300E6EA96 /* Login */,
 				9144DC3026F3AA3F00398BA2 /* myLearningSwiftUI */,
 				9144DC4726F3AA4100398BA2 /* myLearningSwiftUITests */,
 				9144DC5226F3AA4100398BA2 /* myLearningSwiftUIUITests */,
@@ -161,6 +161,9 @@
 		9144DC3026F3AA3F00398BA2 /* myLearningSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				91BDC8B9277D2B2800C10356 /* Redux */,
+				9127893226F402FA00E6EA96 /* Calculator */,
+				9127892D26F3F7C300E6EA96 /* Login */,
 				9144DC3126F3AA3F00398BA2 /* AppDelegate.swift */,
 				9144DC3326F3AA3F00398BA2 /* SceneDelegate.swift */,
 				9144DC3526F3AA3F00398BA2 /* ContentView.swift */,
@@ -196,6 +199,14 @@
 				9144DC5526F3AA4100398BA2 /* Info.plist */,
 			);
 			path = myLearningSwiftUIUITests;
+			sourceTree = "<group>";
+		};
+		91BDC8B9277D2B2800C10356 /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				91BDC8BA277D2B3B00C10356 /* ReduxView.swift */,
+			);
+			path = Redux;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +416,7 @@
 				9144DC3626F3AA3F00398BA2 /* ContentView.swift in Sources */,
 				9127893426F4030800E6EA96 /* Calculator.swift in Sources */,
 				9127893126F3F7E600E6EA96 /* Login.swift in Sources */,
+				91BDC8BB277D2B3B00C10356 /* ReduxView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

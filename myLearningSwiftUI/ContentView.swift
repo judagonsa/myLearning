@@ -11,35 +11,37 @@ struct ContentView: View {
     
     @State var showLogin = false
     @State var showCalculator = false
+    @State var showRedux = false
     
     var body: some View {
         VStack (spacing: 10) {
+            
+            Text("Welcome, My Learninig Judagonsa")
+                .padding()
+            
             Button(action: {
                 showLogin.toggle()
             }, label: {
                 Text("Login")
-                    .frame(height: 40)
-                    .frame(maxWidth: .infinity)
-                    .foregroundColor(.white)
-                    .background(Color.red)
-                    .cornerRadius(5)
+                    .styleButtonHome()
             })
             
             Button(action: {
                 showCalculator.toggle()
             }, label: {
                 Text("Calculator")
-                    .frame(height: 40)
-                    .frame(maxWidth: .infinity)
-                    .foregroundColor(.white)
-                    .background(Color.orange)
-                    .cornerRadius(5)
+                    .styleButtonHome()
+            })
+            
+            Button(action: {
+                showRedux.toggle()
+            }, label: {
+                Text("Redux")
+                    .styleButtonHome()
             })
             
             
             
-            Text("Welcome, My Learninig Judagonsa")
-                .padding()
         }.navigationTitle("My Learning")
         .padding(.horizontal, 20)
         
@@ -49,10 +51,9 @@ struct ContentView: View {
         .fullScreenCover(isPresented: $showCalculator, content: {
             Calculator()
         })
-    }
-    
-    func openLogin(){
-        
+        .fullScreenCover(isPresented: $showRedux, content: {
+            ReduxView()
+        })
     }
 }
 
@@ -60,4 +61,27 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+//modifier
+struct ModifierButton: ViewModifier {
+    func body (content: Content) -> some View {
+        content
+            .font(.body)
+            .frame(height: 40)
+            .frame(maxWidth: .infinity)
+            .foregroundColor(.white)
+            .background(Color.colorPrimary)
+            .cornerRadius(10)
+    }
+}
+
+extension View {
+    func styleButtonHome() -> some View {
+        self.modifier(ModifierButton())
+    }
+}
+
+extension Color {
+    static let colorPrimary: Color = Color("colorPrimary")
 }
