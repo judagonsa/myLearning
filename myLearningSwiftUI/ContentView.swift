@@ -12,7 +12,6 @@ struct ContentView: View {
     @State var showLogin = false
     @State var showCalculator = false
     @State var showRedux = false
-    @State var list = false
     
     var body: some View {
         VStack (spacing: 10) {
@@ -41,13 +40,6 @@ struct ContentView: View {
                     .styleButtonHome()
             })
             
-            Button(action: {
-                list.toggle()
-            }, label: {
-                Text("List")
-                    .styleButtonHome()
-            })
-            
         }.navigationTitle("My Learning")
         .padding(.horizontal, 20)
         
@@ -59,9 +51,6 @@ struct ContentView: View {
         })
         .fullScreenCover(isPresented: $showRedux, content: {
             ReduxView()
-        })
-        .fullScreenCover(isPresented: $list, content: {
-            ExampleList()
         })
     }
 }
@@ -93,4 +82,6 @@ extension View {
 
 extension Color {
     static let colorPrimary: Color = Color("colorPrimary")
+    
+    static let secondaryColor: Color = Color("colorSecundary")
 }

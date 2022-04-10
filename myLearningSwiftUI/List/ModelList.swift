@@ -12,6 +12,4 @@ struct Book: Decodable, Identifiable {
     var id: Int
     var title: String
     var completed: Bool
-    
-  
 }

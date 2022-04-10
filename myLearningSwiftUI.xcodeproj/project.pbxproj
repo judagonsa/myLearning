@@ -12,6 +12,10 @@
 		9115E8042801D8D0005E1A4C /* ExampleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9115E8032801D8D0005E1A4C /* ExampleList.swift */; };
 		9115E8062801D8F1005E1A4C /* ModelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9115E8052801D8F1005E1A4C /* ModelList.swift */; };
 		9115E8082801D9A0005E1A4C /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9115E8072801D9A0005E1A4C /* ListVC.swift */; };
+		9115E80A28036D12005E1A4C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9115E80928036D11005E1A4C /* LoginVC.swift */; };
+		9115E80D28037A6E005E1A4C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9115E80C28037A6D005E1A4C /* ProfileView.swift */; };
+		9115E80F28037AB9005E1A4C /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9115E80E28037AB9005E1A4C /* ProfileModel.swift */; };
+		9115E81128037AC6005E1A4C /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9115E81028037AC6005E1A4C /* ProfileVC.swift */; };
 		9127893126F3F7E600E6EA96 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9127893026F3F7E600E6EA96 /* Login.swift */; };
 		9127893426F4030800E6EA96 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9127893326F4030800E6EA96 /* Calculator.swift */; };
 		9144DC3226F3AA3F00398BA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9144DC3126F3AA3F00398BA2 /* AppDelegate.swift */; };
@@ -53,6 +57,10 @@
 		9115E8032801D8D0005E1A4C /* ExampleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleList.swift; sourceTree = "<group>"; };
 		9115E8052801D8F1005E1A4C /* ModelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelList.swift; sourceTree = "<group>"; };
 		9115E8072801D9A0005E1A4C /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
+		9115E80928036D11005E1A4C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		9115E80C28037A6D005E1A4C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		9115E80E28037AB9005E1A4C /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		9115E81028037AC6005E1A4C /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		9127893026F3F7E600E6EA96 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		9127893326F4030800E6EA96 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		9144DC2E26F3AA3F00398BA2 /* myLearningSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myLearningSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,10 +148,21 @@
 			path = List;
 			sourceTree = "<group>";
 		};
+		9115E80B28037A5E005E1A4C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				9115E80C28037A6D005E1A4C /* ProfileView.swift */,
+				9115E81028037AC6005E1A4C /* ProfileVC.swift */,
+				9115E80E28037AB9005E1A4C /* ProfileModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		9127892D26F3F7C300E6EA96 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				9127893026F3F7E600E6EA96 /* Login.swift */,
+				9115E80928036D11005E1A4C /* LoginVC.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -183,13 +202,14 @@
 		9144DC3026F3AA3F00398BA2 /* myLearningSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				9115E80B28037A5E005E1A4C /* Profile */,
 				9115E8022801D8C2005E1A4C /* List */,
 				91BDC8B9277D2B2800C10356 /* Redux */,
 				9127893226F402FA00E6EA96 /* Calculator */,
 				9127892D26F3F7C300E6EA96 /* Login */,
+				9144DC3526F3AA3F00398BA2 /* ContentView.swift */,
 				9144DC3126F3AA3F00398BA2 /* AppDelegate.swift */,
 				9144DC3326F3AA3F00398BA2 /* SceneDelegate.swift */,
-				9144DC3526F3AA3F00398BA2 /* ContentView.swift */,
 				9144DC3726F3AA4100398BA2 /* Assets.xcassets */,
 				9144DC3C26F3AA4100398BA2 /* LaunchScreen.storyboard */,
 				9144DC3F26F3AA4100398BA2 /* Info.plist */,
@@ -434,8 +454,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9115E81128037AC6005E1A4C /* ProfileVC.swift in Sources */,
 				91BDC8BD27925BE700C10356 /* Model.swift in Sources */,
+				9115E80F28037AB9005E1A4C /* ProfileModel.swift in Sources */,
+				9115E80D28037A6E005E1A4C /* ProfileView.swift in Sources */,
 				9115E8082801D9A0005E1A4C /* ListVC.swift in Sources */,
+				9115E80A28036D12005E1A4C /* LoginVC.swift in Sources */,
 				91BDC8BF27925CD100C10356 /* ColorCalculator.swift in Sources */,
 				9144DC3226F3AA3F00398BA2 /* AppDelegate.swift in Sources */,
 				9115E8062801D8F1005E1A4C /* ModelList.swift in Sources */,
@@ -618,6 +642,7 @@
 				DEVELOPMENT_TEAM = L3DN797DGV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = myLearningSwiftUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -625,7 +650,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = judagonsa.myLearningSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -640,6 +665,7 @@
 				DEVELOPMENT_TEAM = L3DN797DGV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = myLearningSwiftUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -647,7 +673,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = judagonsa.myLearningSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
