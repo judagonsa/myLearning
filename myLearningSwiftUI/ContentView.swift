@@ -84,4 +84,6 @@ extension Color {
     static let colorPrimary: Color = Color("colorPrimary")
     
     static let secondaryColor: Color = Color("colorSecundary")
+    
+    static let grayColor: Color = Color("grayColor")
 }

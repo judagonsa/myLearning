@@ -14,7 +14,8 @@ struct Login: View {
     @State var username = ""
     @State var password = ""
     @ObservedObject var loginVC = LoginVC()
-    @State var validUsername = false
+    @State var validUsername = true
+    @State var validPassword = true
     
     @State var registerUser = ""
     @State var loginUser = ""
@@ -31,29 +32,40 @@ struct Login: View {
                     .onChange(of: username) { newUser in
                         validUsername = loginVC.validateUserName(username: username)
                     }
-                    .frame(height: 40)
+                    .padding(10)
                     .overlay(
                         RoundedRectangle(cornerRadius: 5)
-                            .stroke(validUsername ? Color.green : Color.red, lineWidth: 1)
+                            .stroke(validUsername ? Color.gray : Color.red, lineWidth: 1)
                     )
-                
+                    .background(Color.white)
                     
-                    
-                
                 SecureField( "Contraseña", text: $password)
-                    .frame(height: 40)
+                    .onChange(of: password) { newPass in
+                        validPassword = loginVC.validatePassword(password: password)
+                    }
+                    .padding(10)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke(validPassword ? Color.gray : Color.red, lineWidth: 1)
+                    )
+                    .background(Color.white)
+                
+                Button(action: {
+                    loginVC.loginUser(username: username, password: password)
+                }, label: {
+                    Text("Aceptar")
+                })
+                    .frame(width: 150, height: 40, alignment: .center)
+                    .foregroundColor(.white)
+                    .background(Color.secondaryColor)
+                    .cornerRadius(5)
 
             }
+            .padding()
+            .background(Color.grayColor)
+            .cornerRadius(10)
             
-            Button(action: {
-                loginVC.loginUser(username: username, password: password)
-            }, label: {
-                Text("Aceptar")
-            })
-                .frame(width: 150, height: 40, alignment: .center)
-                .foregroundColor(.white)
-                .background(Color.secondaryColor)
-                .cornerRadius(5)
+            
             
             Spacer()
             Button(action: {
