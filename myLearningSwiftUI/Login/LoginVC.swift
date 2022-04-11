@@ -9,15 +9,14 @@ import Foundation
 
 class LoginVC: ObservableObject {
     
-    func validateUserName (username: String)  -> Bool {
-        if username.count > 100 {
+    func validateEmail (email: String)  -> Bool {
+        if email.count > 100 {
             return false
         }
         let emailFormat = "(?:[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$)"
         let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailFormat)
         
-        print("email: \(username), validación: \(emailPredicate.evaluate(with: username))")
-        return emailPredicate.evaluate(with: username)
+        return emailPredicate.evaluate(with: email)
     }
     
     func validatePassword (password: String) -> Bool {
@@ -29,7 +28,6 @@ class LoginVC: ObservableObject {
         let passwordFormat = "(?:(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$)"
         let passwordPredicate = NSPredicate(format:"SELF MATCHES %@", passwordFormat)
         
-        print("password: \(password), validación: \(passwordPredicate.evaluate(with: password))")
         return passwordPredicate.evaluate(with: password)
     }
     
