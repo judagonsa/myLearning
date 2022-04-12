@@ -25,6 +25,13 @@ struct Login: View {
     
     @State var showProfile = false
     
+    @State var isRegister = false
+    
+    init(){
+        isRegister = false
+        showProfile = false
+    }
+    
     var body: some View {
         VStack{
             
@@ -132,9 +139,8 @@ struct Login: View {
             Spacer()
             Button(action: {
                 
-                if validTextFields() {
-                    loginVC.registerUser(username: email, password: password)
-                }
+                isRegister = true
+                showProfile = true
                 
             }, label: {
                 Text("Registrarme")
@@ -144,7 +150,7 @@ struct Login: View {
         }.padding()
         
         .fullScreenCover(isPresented: $showProfile, content: {
-            ProfileView()
+            ProfileView(isRegister: isRegister)
         })
     }
     
