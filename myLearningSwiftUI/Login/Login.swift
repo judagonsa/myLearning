@@ -14,7 +14,7 @@ struct Login: View {
     @State var email = ""
     @State var password = ""
     @ObservedObject var loginVC = LoginVC()
-    @State var validUsername = true
+    @State var validEmail = true
     @State var textErrorEmail = ""
     
     @State var validPassword = true
@@ -57,24 +57,23 @@ struct Login: View {
                         
                         if !newUser.isEmpty {
                             
-                            validUsername = loginVC.validateEmail(email: email)
+                            validEmail = loginVC.validateEmail(email: email)
                             
-                            if !validUsername {
+                            if !validEmail {
                                 textErrorEmail = "Formato de correo inválido"
                             }else{
                                 textErrorEmail = ""
                             }
                         }else{
-                            validUsername = true
+                            validEmail = true
                         }
                         
                     }
-                    .padding(10)
+                    .styleInput()
                     .overlay(
                         RoundedRectangle(cornerRadius: 5)
-                            .stroke(validUsername ? Color.gray : Color.red, lineWidth: 1)
+                            .stroke(validEmail ? Color.gray : Color.red, lineWidth: 1)
                     )
-                    .background(Color.white)
                     .keyboardType(.emailAddress)
                     .textContentType(.emailAddress)
                     .autocapitalization(.none)
@@ -102,12 +101,11 @@ struct Login: View {
                         }
                         
                     }
-                    .padding(10)
+                    .styleInput()
                     .overlay(
                         RoundedRectangle(cornerRadius: 5)
                             .stroke(validPassword ? Color.gray : Color.red, lineWidth: 1)
                     )
-                    .background(Color.white)
                 
                 HStack {
                     Text(textErrorPassword)
@@ -123,10 +121,7 @@ struct Login: View {
                     
                 }, label: {
                     Text("Aceptar")
-                        .frame(width: 150, height: 40, alignment: .center)
-                        .foregroundColor(.white)
-                        .background(Color.secondaryColor)
-                        .cornerRadius(5)
+                        .styleButtonView()
                 })
                     
 

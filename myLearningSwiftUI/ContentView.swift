@@ -78,12 +78,37 @@ extension View {
     func styleButtonHome() -> some View {
         self.modifier(ModifierButton())
     }
+    
+    func styleInput() -> some View {
+        self.modifier(ModifierTextFiled())
+    }
+    
+    func styleButtonView() -> some View {
+        self.modifier(ModifierButtonView())
+    }
 }
 
 extension Color {
     static let colorPrimary: Color = Color("colorPrimary")
-    
     static let secondaryColor: Color = Color("colorSecundary")
-    
     static let grayColor: Color = Color("grayColor")
+}
+
+struct ModifierTextFiled: ViewModifier {
+    func body (content: Content) -> some View {
+        content
+            .padding(10)
+            .background(Color.white)
+            .cornerRadius(8)
+    }
+}
+
+struct ModifierButtonView: ViewModifier {
+    func body (content: Content) -> some View {
+        content
+            .frame(width: 150, height: 40)
+            .foregroundColor(.white)
+            .background(Color.secondaryColor)
+            .cornerRadius(5)
+    }
 }
